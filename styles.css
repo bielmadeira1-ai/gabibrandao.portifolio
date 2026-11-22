@@ -17,3 +17,80 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
 @media(max-width:800px){.site-header{height:72px}.main-nav{gap:17px}.main-nav a:not(.nav-contact){display:none}.hero-inner{grid-template-columns:1fr;gap:15px;padding-top:18px;padding-bottom:80px}.hero-art{min-height:480px;max-width:530px;width:100%;margin:auto}.portrait-card{width:min(68%,320px)}.portrait-card img{height:390px}.hero-copy{max-width:590px;margin:auto}.hero-copy>p{font-size:17px}.heart-charm{width:170px;left:0;bottom:-2px}.round-stamp{right:5%;bottom:58px;width:90px;height:90px;font-size:8px}.star-one{right:11%}.about-layout,.projects-intro,.services-heading{grid-template-columns:1fr;gap:27px}.about{padding:85px 0 55px}.projects{padding:55px 0 90px}.services{padding:85px 0}.service-grid{grid-template-columns:1fr}.service-grid article{min-height:0}.service-symbol{margin-bottom:12px}.services-heading{margin-bottom:32px}.footer-inner{flex-wrap:wrap;padding:25px 0}.dialog-inner{gap:18px;padding:24px;grid-template-columns:1fr}.dialog-copy{position:static;padding:10px 0 0}.dialog-copy h2{font-size:36px;margin:10px 0}.dialog-copy p{margin-bottom:20px}.dialog-close{margin-bottom:-45px}}
 @media(max-width:540px){.wrap,.site-header{width:calc(100% - 36px)}.ticker{font-size:10px}.wordmark{font-size:17px}.flower{width:31px}.nav-contact{font-size:11px;padding:10px 13px}.hero-art{min-height:420px}.portrait-card{width:min(72%,280px)}.portrait-card img{height:335px}.heart-charm{width:145px;left:-13px;bottom:0}.round-stamp{width:78px;height:78px;right:3%;bottom:47px;font-size:7px;box-shadow:0 0 0 4px white}.star-one{top:6%;font-size:36px}.mini-labels{margin-bottom:20px}.hero-copy h1{font-size:clamp(40px,11vw,56px)}.hero-notes{font-size:10px}.hero-notes span:not(:first-child){margin-left:5px}.hero-actions{align-items:flex-start;flex-direction:column;gap:20px}.section-heading h2,.projects-intro h2{font-size:clamp(37px,10vw,53px)}.about-copy,.projects-intro>p{font-size:16px}.about-copy .about-lead{font-size:21px}.project-grid{grid-template-columns:1fr;gap:22px}.project-image{aspect-ratio:1.18}.project-info h3{font-size:30px}.service-grid article{padding:24px}.contact-inner{padding:95px 0 85px}.contact-star{font-size:35px;top:9%;left:0}.contact h2{font-size:clamp(40px,11vw,56px)}.contact-inner>p:not(.contact-handle){font-size:16px}.footer-inner p{width:100%;order:3;margin-top:-7px}.dialog-inner{padding:20px}.dialog-copy .pill-button{min-height:50px;padding:12px 18px}.side-note{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.project-image img,.pill-button{transition:none}}
+
+/* A logo original permanece inteira; apenas o espaço preto ao redor fica fora do cabeçalho. */
+.site-header .wordmark{position:relative;display:block;flex:none;width:170px;height:82px;overflow:hidden}
+.site-header .wordmark img{position:absolute;top:50%;left:50%;width:220px;height:auto;max-width:none;transform:translate(-50%,-50%);mix-blend-mode:screen}
+
+/* Capa: pasta na frente do título e chaveiro pendurado atrás dela. */
+.cover-layout{padding:10px 0 60px}
+.cover-stage{position:relative;height:680px;max-width:1120px;margin:auto;isolation:isolate}
+.cover-title{position:absolute;z-index:2;top:50px;left:0;width:100%;text-align:center;white-space:nowrap;font-family:var(--display);font-size:clamp(3rem,11vw,9.4rem);line-height:1;letter-spacing:-.075em;color:#fff;text-shadow:0 4px 24px #000}
+.cover-folder,.cover-keychain{position:absolute;max-width:none;height:auto;pointer-events:none;filter:drop-shadow(0 15px 26px #0009)}
+.cover-folder{z-index:3;top:176px;left:47%;width:min(45%,490px);transform:translateX(-50%) rotate(-5deg)}
+.cover-keychain{z-index:1;top:112px;right:7%;width:min(28%,305px);transform:rotate(9deg)}
+.cover-subtitle{position:absolute;z-index:4;top:340px;left:47%;transform:translateX(-50%) rotate(-3deg);white-space:nowrap;padding:4px 18px 7px;background:#111;color:#fff;border:3px solid var(--pink);box-shadow:7px 7px 0 var(--pink);font-family:var(--display);font-size:clamp(3.4rem,7.5vw,6.5rem);line-height:1;letter-spacing:-.07em}
+.cover-actions{position:absolute;z-index:5;bottom:12px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:25px;width:100%;flex-wrap:wrap}
+.cover-orbit{position:absolute;z-index:0;left:50%;top:42%;border:1px solid #f900a35c;border-radius:50%;pointer-events:none}
+.cover-orbit-one{width:78%;height:53%;transform:translate(-50%,-50%) rotate(-12deg)}
+.cover-orbit-two{width:66%;height:72%;transform:translate(-50%,-50%) rotate(17deg)}
+.cover-star{position:absolute;z-index:1;font-size:48px;color:#fff;text-shadow:0 0 16px #fff8}
+.cover-star-left{top:220px;left:11%}.cover-star-right{top:60px;right:11%;color:var(--pink)}
+
+/* Apresentação com a foto inteira, depois da capa. */
+.about-portrait{position:relative;width:min(100%,430px);padding:9px 9px 36px;margin-inline:auto;background:#fff;transform:rotate(-3deg);box-shadow:0 15px 42px #160c172e}
+.about-portrait:before{content:'';position:absolute;z-index:1;top:-14px;left:calc(50% - 54px);width:108px;height:29px;background:rgba(249,0,163,.28);transform:rotate(3deg)}
+.about-portrait img{display:block;width:100%;height:auto}
+.about-text .about-copy{margin-top:25px}
+.about-text .section-heading h2{font-size:clamp(39px,4.7vw,59px)}
+
+/* As imagens dos projetos aparecem completas antes de abrir o ampliador. */
+.project-image{aspect-ratio:auto}
+.project-image img{width:100%;height:auto;object-fit:contain;object-position:center}
+.project-image:hover img{transform:none}
+.image-tag{position:static;display:table;margin:15px 20px 0}
+
+/* O projeto abre maior e o fundo fica desfocado; o botão permite ampliar mais. */
+.project-dialog{width:min(1100px,calc(100% - 24px))}
+.project-dialog::backdrop{background:rgba(0,0,0,.76);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.dialog-inner{display:flex;flex-direction:column;align-items:center;gap:20px;padding:28px 35px 45px}
+.dialog-copy{position:static;align-self:stretch;padding-top:0}
+.dialog-copy h2{margin:10px 0 12px}
+.dialog-copy p{margin-bottom:20px}
+.dialog-close{position:sticky;align-self:flex-end;top:0;flex:none;margin-bottom:-54px}
+.dialog-zoom{align-self:flex-start;padding:9px 15px;border:1px solid var(--pink);border-radius:99px;background:#1c111a;color:#fff;font-weight:800;font-size:13px;cursor:pointer}
+.dialog-zoom:hover,.dialog-zoom[aria-pressed=true]{background:var(--pink);color:#100610}
+.dialog-image-frame{width:min(100%,865px);overflow:auto;border-radius:10px;overscroll-behavior:contain}
+.dialog-image-frame img{display:block;width:100%;height:auto;max-width:none}
+.dialog-image-frame.is-zoomed img{width:150%}
+
+@media(max-width:800px){
+  .site-header .wordmark{width:155px;height:72px}
+  .site-header .wordmark img{width:200px}
+  .cover-stage{height:610px}
+  .cover-title{top:58px;font-size:clamp(3rem,11vw,6.8rem)}
+  .cover-folder{top:165px;width:min(58%,410px)}
+  .cover-keychain{top:116px;right:4%;width:min(33%,240px)}
+  .cover-subtitle{top:312px;font-size:clamp(3.5rem,8vw,5.5rem)}
+  .cover-orbit-one{width:92%}.cover-orbit-two{width:75%}
+  .about-layout{gap:45px}
+  .about-portrait{width:min(80%,350px)}
+  .dialog-inner{padding:20px 22px 35px}
+}
+@media(max-width:540px){
+  .site-header .wordmark{width:128px;height:72px}
+  .site-header .wordmark img{width:180px}
+  .cover-layout{padding:5px 0 45px}
+  .cover-stage{height:480px}
+  .cover-title{top:40px;font-size:clamp(2.65rem,11.2vw,3.8rem)}
+  .cover-folder{top:108px;left:44%;width:72%}
+  .cover-keychain{top:86px;right:0;width:47%}
+  .cover-subtitle{top:215px;left:44%;padding:4px 9px 6px;font-size:clamp(2.65rem,10vw,3.8rem);border-width:2px;box-shadow:5px 5px 0 var(--pink)}
+  .cover-actions{bottom:0;gap:18px;flex-direction:column}
+  .cover-star{font-size:31px}.cover-star-left{top:145px;left:3%}.cover-star-right{top:34px;right:4%}
+  .cover-orbit-one{width:100%;height:48%}.cover-orbit-two{width:79%;height:59%}
+  .about-portrait{width:min(88%,320px)}
+  .about-text .section-heading h2{font-size:clamp(36px,9.4vw,48px)}
+  .project-image{aspect-ratio:auto}
+  .dialog-inner{padding:16px 14px 24px}
+}
