@@ -22,20 +22,21 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
 .site-header .wordmark{position:relative;display:block;flex:none;width:170px;height:82px;overflow:hidden}
 .site-header .wordmark img{position:absolute;top:50%;left:50%;width:220px;height:auto;max-width:none;transform:translate(-50%,-50%);mix-blend-mode:screen}
 
-/* Capa: pasta na frente do título e chaveiro pendurado atrás dela. */
+/* Capa com boas-vindas em Google Sans e nome em rosa. */
 .cover-layout{padding:10px 0 60px}
-.cover-stage{position:relative;height:680px;max-width:1120px;margin:auto;isolation:isolate}
-.cover-title{position:absolute;z-index:2;top:50px;left:0;width:100%;text-align:center;white-space:nowrap;font-family:var(--display);font-size:clamp(3rem,11vw,9.4rem);line-height:1;letter-spacing:-.075em;color:#fff;text-shadow:0 4px 24px #000}
-.cover-folder,.cover-keychain{position:absolute;max-width:none;height:auto;pointer-events:none;filter:drop-shadow(0 15px 26px #0009)}
-.cover-folder{z-index:3;top:176px;left:47%;width:min(45%,490px);transform:translateX(-50%) rotate(-5deg)}
-.cover-keychain{z-index:1;top:112px;right:7%;width:min(28%,305px);transform:rotate(9deg)}
-.cover-subtitle{position:absolute;z-index:4;top:340px;left:47%;transform:translateX(-50%) rotate(-3deg);white-space:nowrap;padding:4px 18px 7px;background:#111;color:#fff;border:3px solid var(--pink);box-shadow:7px 7px 0 var(--pink);font-family:var(--display);font-size:clamp(3.4rem,7.5vw,6.5rem);line-height:1;letter-spacing:-.07em}
-.cover-actions{position:absolute;z-index:5;bottom:12px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:25px;width:100%;flex-wrap:wrap}
-.cover-orbit{position:absolute;z-index:0;left:50%;top:42%;border:1px solid #f900a35c;border-radius:50%;pointer-events:none}
+.cover-stage{position:relative;min-height:36rem;max-width:1120px;margin:auto;padding:5rem 0 3.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3rem;isolation:isolate}
+.cover-copy{position:relative;z-index:2;width:100%;text-align:center}
+.cover-welcome{margin-bottom:1.35rem;font-family:'Google Sans',var(--font);font-size:clamp(1.25rem,2.4vw,1.875rem);font-weight:300;line-height:1.4;letter-spacing:.015em;color:#f4edf2}
+.cover-title{position:relative;max-width:none;width:100%;text-align:center;font-family:var(--display);font-size:clamp(2.3rem,8.2vw,7.25rem);line-height:1.08;letter-spacing:-.065em;color:#fff}
+.cover-title-main{display:block;white-space:nowrap}
+.cover-name{display:block;margin-top:.2em;color:var(--pink);font-size:clamp(2.5rem,7.8vw,6.8rem);letter-spacing:-.06em;white-space:nowrap}
+.cover-keychain{position:absolute;z-index:1;right:0;bottom:0;width:min(17%,180px);height:auto;max-width:none;transform:rotate(12deg);pointer-events:none;filter:drop-shadow(0 15px 26px #0009)}
+.cover-actions{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;gap:25px;width:100%;flex-wrap:wrap}
+.cover-orbit{position:absolute;z-index:0;left:50%;top:45%;border:1px solid #f900a35c;border-radius:50%;pointer-events:none}
 .cover-orbit-one{width:78%;height:53%;transform:translate(-50%,-50%) rotate(-12deg)}
 .cover-orbit-two{width:66%;height:72%;transform:translate(-50%,-50%) rotate(17deg)}
 .cover-star{position:absolute;z-index:1;font-size:48px;color:#fff;text-shadow:0 0 16px #fff8}
-.cover-star-left{top:220px;left:11%}.cover-star-right{top:60px;right:11%;color:var(--pink)}
+.cover-star-left{top:12%;left:5%}.cover-star-right{top:12%;right:7%;color:var(--pink)}
 
 /* Apresentação, história e hobbies da Gabi. */
 .about{scroll-margin-top:2rem}
@@ -111,11 +112,10 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
 @media(max-width:800px){
   .site-header .wordmark{width:155px;height:72px}
   .site-header .wordmark img{width:200px}
-  .cover-stage{height:610px}
-  .cover-title{top:58px;font-size:clamp(3rem,11vw,6.8rem)}
-  .cover-folder{top:165px;width:min(58%,410px)}
-  .cover-keychain{top:116px;right:4%;width:min(33%,240px)}
-  .cover-subtitle{top:312px;font-size:clamp(3.5rem,8vw,5.5rem)}
+  .cover-stage{min-height:31rem;padding:4rem 0 3rem;gap:2.5rem}
+  .cover-title{font-size:clamp(2.3rem,8.2vw,4.1rem)}
+  .cover-name{font-size:clamp(2.5rem,8.2vw,4.1rem)}
+  .cover-keychain{width:min(19%,140px);right:0;bottom:0}
   .cover-orbit-one{width:92%}.cover-orbit-two{width:75%}
   .dialog-inner{padding:20px 22px 35px}
 }
@@ -123,13 +123,13 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
   .site-header .wordmark{width:128px;height:72px}
   .site-header .wordmark img{width:180px}
   .cover-layout{padding:5px 0 45px}
-  .cover-stage{height:480px}
-  .cover-title{top:40px;font-size:clamp(2.65rem,11.2vw,3.8rem)}
-  .cover-folder{top:108px;left:44%;width:72%}
-  .cover-keychain{top:86px;right:0;width:47%}
-  .cover-subtitle{top:215px;left:44%;padding:4px 9px 6px;font-size:clamp(2.65rem,10vw,3.8rem);border-width:2px;box-shadow:5px 5px 0 var(--pink)}
-  .cover-actions{bottom:0;gap:18px;flex-direction:column}
-  .cover-star{font-size:31px}.cover-star-left{top:145px;left:3%}.cover-star-right{top:34px;right:4%}
+  .cover-stage{min-height:25rem;padding:3rem 0 2.5rem;gap:2.25rem}
+  .cover-welcome{font-size:1.25rem;margin-bottom:1rem}
+  .cover-title{font-size:clamp(1.9rem,9vw,3.1rem)}
+  .cover-name{font-size:clamp(2.1rem,9.3vw,3.25rem);margin-top:.3em}
+  .cover-keychain{width:5.5rem;right:-.5rem;bottom:1rem;opacity:.8}
+  .cover-actions{gap:18px;flex-direction:column}
+  .cover-star{font-size:26px}.cover-star-left{top:3%;left:3%}.cover-star-right{top:3%;right:4%}
   .cover-orbit-one{width:100%;height:48%}.cover-orbit-two{width:79%;height:59%}
   .project-image{aspect-ratio:auto}
   .dialog-inner{padding:16px 14px 24px}

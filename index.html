@@ -10,7 +10,7 @@
     <title>Gabi Brandão — Design com personalidade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Google+Sans:wght@300;400&amp;family=Raleway:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
   </head>
@@ -37,7 +37,7 @@
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="hero">
+      <section id="inicio" class="hero" aria-labelledby="cover-title">
         <div class="cover-layout wrap">
           <div class="cover-stage">
             <div class="cover-orbit cover-orbit-one" aria-hidden="true"></div>
@@ -45,9 +45,10 @@
             <span class="cover-star cover-star-left" aria-hidden="true">✦</span>
             <span class="cover-star cover-star-right" aria-hidden="true">✦</span>
             <img class="cover-keychain" src="./assets/chaveiro-hello.png" alt="" width="641" height="641" aria-hidden="true">
-            <h1 class="cover-title" aria-label="PORTFÓLIO DA GABII">PORTFÓLIO</h1>
-            <img class="cover-folder" src="./assets/pasta-pink.png" alt="" width="641" height="641" aria-hidden="true" fetchpriority="high">
-            <span class="cover-subtitle" aria-hidden="true">DA GABII</span>
+            <div class="cover-copy">
+              <p class="cover-welcome">Seja bem-vinda(o) ao</p>
+              <h1 id="cover-title" class="cover-title"><span class="cover-title-main">PORTFÓLIO DA</span><span class="cover-name">Gabi Brandão</span></h1>
+            </div>
             <div class="cover-actions">
               <a class="pill-button" href="#projetos">CONHECER OS PROJETOS <span aria-hidden="true">✦</span></a>
               <a class="text-link" href="#sobre">vem me conhecer</a>
