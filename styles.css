@@ -81,6 +81,14 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
 }
 
 /* As imagens dos projetos aparecem completas antes de abrir o ampliador. */
+.projects .project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-info h3{font-size:clamp(1.6rem,2.4vw,2.2rem);line-height:1.15}
+.project-info p{font-size:1rem}
+.project-meta{font-size:.875rem;letter-spacing:.04em;line-height:1.6}
+@media(max-width:960px){
+  .projects .project-grid{grid-template-columns:1fr}
+  .projects .project-card{width:100%;max-width:36.25rem;justify-self:center}
+}
 .project-image{aspect-ratio:auto}
 .project-image img{width:100%;height:auto;object-fit:contain;object-position:center}
 .project-image:hover img{transform:none}
