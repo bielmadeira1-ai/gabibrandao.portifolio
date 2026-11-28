@@ -37,12 +37,48 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
 .cover-star{position:absolute;z-index:1;font-size:48px;color:#fff;text-shadow:0 0 16px #fff8}
 .cover-star-left{top:220px;left:11%}.cover-star-right{top:60px;right:11%;color:var(--pink)}
 
-/* Apresentação com a foto inteira, depois da capa. */
-.about-portrait{position:relative;width:min(100%,430px);padding:9px 9px 36px;margin-inline:auto;background:#fff;transform:rotate(-3deg);box-shadow:0 15px 42px #160c172e}
-.about-portrait:before{content:'';position:absolute;z-index:1;top:-14px;left:calc(50% - 54px);width:108px;height:29px;background:rgba(249,0,163,.28);transform:rotate(3deg)}
-.about-portrait img{display:block;width:100%;height:auto}
-.about-text .about-copy{margin-top:25px}
-.about-text .section-heading h2{font-size:clamp(39px,4.7vw,59px)}
+/* Apresentação, história e hobbies da Gabi. */
+.about{scroll-margin-top:2rem}
+.about .about-layout{display:flex;flex-direction:column;align-items:stretch;gap:3.5rem}
+.about-intro{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.about .eyebrow{font-size:.875rem;letter-spacing:.1em}
+.about .section-heading h2{font-size:clamp(2.4rem,4.6vw,3.8rem);line-height:1.14;margin-top:1.1rem}
+.about .section-heading h2 b{padding:0 .16em .04em;transform:rotate(-2deg);margin-top:.15em}
+.about-nickname{margin-top:1.25rem;color:#b50070;font-size:1.25rem;font-weight:800;letter-spacing:-.03em}
+.about-welcome{max-width:29rem}
+.about-copy{line-height:1.8}
+.about-welcome .about-lead{font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.45}
+.about-details{display:grid;grid-template-columns:1.14fr 1fr;gap:3.5rem;align-items:start}
+.about-story{padding-top:.5rem}
+.about-story h3,.about-hobbies h3{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,1.85rem);line-height:1.2;letter-spacing:-.045em;margin-bottom:1.5rem}
+.about-story strong{font-weight:800;color:#a60068}
+.about-hobbies{position:relative;min-width:0;padding:2.25rem;background:var(--ink);color:var(--white);border:1px solid #f900a370;border-radius:1.25rem;box-shadow:6px 6px 0 var(--pink)}
+.about-hobbies:before{content:'';position:absolute;top:-.7rem;left:calc(50% - 3rem);width:6rem;height:1.4rem;background:#f900a3b3;transform:rotate(-4deg)}
+.about-hobbies .eyebrow{display:block;margin-bottom:1.3rem}
+.about-hobbies h3{color:#fff;font-size:clamp(1.6rem,2.8vw,2rem)}
+.about-keep{white-space:nowrap}
+.about-hobbies .about-copy{color:#f1e7ed;font-size:1rem}
+.about-hobbies strong{color:#ff90d9;font-weight:800}
+.about-outro{border-top:1px solid #e3d7df;padding-top:2.5rem;text-align:center}
+.about-outro>p{max-width:43rem;margin-inline:auto;color:#42333e;font-size:1.0625rem;line-height:1.75}
+.about-outro .about-invitation{max-width:42rem;margin-top:1.2rem;color:var(--ink);font-size:clamp(1.2rem,2.2vw,1.5rem);line-height:1.5;font-weight:800;letter-spacing:-.025em}
+.about-outro .pill-button{margin-top:1.75rem;font-size:.875rem}
+@media(max-width:800px){
+  .about .about-layout{gap:2.5rem}
+  .about-intro,.about-details{grid-template-columns:1fr;gap:2rem}
+  .about-welcome{max-width:40rem}
+  .about-hobbies{max-width:40rem;width:100%;justify-self:center}
+}
+@media(max-width:540px){
+  .about .eyebrow{font-size:.875rem;letter-spacing:.07em}
+  .about .section-heading h2{font-size:clamp(2.1rem,8vw,2.7rem)}
+  .about-nickname{font-size:1.125rem}
+  .about .about-copy{font-size:1rem}
+  .about-welcome .about-lead{font-size:1.3rem}
+  .about-hobbies{padding:1.75rem 1.5rem}
+  .about-outro{padding-top:2rem}
+  .about-outro .pill-button{max-width:100%;padding-inline:1.1rem;letter-spacing:0}
+}
 
 /* As imagens dos projetos aparecem completas antes de abrir o ampliador. */
 .project-image{aspect-ratio:auto}
@@ -73,8 +109,6 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
   .cover-keychain{top:116px;right:4%;width:min(33%,240px)}
   .cover-subtitle{top:312px;font-size:clamp(3.5rem,8vw,5.5rem)}
   .cover-orbit-one{width:92%}.cover-orbit-two{width:75%}
-  .about-layout{gap:45px}
-  .about-portrait{width:min(80%,350px)}
   .dialog-inner{padding:20px 22px 35px}
 }
 @media(max-width:540px){
@@ -89,8 +123,6 @@ footer{background:#080708}.footer-inner{min-height:110px;display:flex;justify-co
   .cover-actions{bottom:0;gap:18px;flex-direction:column}
   .cover-star{font-size:31px}.cover-star-left{top:145px;left:3%}.cover-star-right{top:34px;right:4%}
   .cover-orbit-one{width:100%;height:48%}.cover-orbit-two{width:79%;height:59%}
-  .about-portrait{width:min(88%,320px)}
-  .about-text .section-heading h2{font-size:clamp(36px,9.4vw,48px)}
   .project-image{aspect-ratio:auto}
   .dialog-inner{padding:16px 14px 24px}
 }
